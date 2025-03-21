@@ -6804,6 +6804,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-asset-conversion-tx-payment"
+version = "21.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b84e3e2883341b93117f1d4582ed9e4d466448a568883e5fe4ce7a195b8f709a"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-asset-conversion",
+ "pallet-transaction-payment",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-runtime",
+]
+
+[[package]]
 name = "pallet-asset-rate"
 version = "18.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8044,6 +8060,8 @@ dependencies = [
  "frame-try-runtime",
  "hex-literal",
  "log",
+ "pallet-asset-conversion",
+ "pallet-asset-conversion-tx-payment",
  "pallet-assets",
  "pallet-aura",
  "pallet-authorship",

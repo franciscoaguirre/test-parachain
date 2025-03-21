@@ -108,7 +108,7 @@ pub type TxExtension = (
     frame_system::CheckEra<Runtime>,
     frame_system::CheckNonce<Runtime>,
     frame_system::CheckWeight<Runtime>,
-    pallet_transaction_payment::ChargeTransactionPayment<Runtime>,
+    pallet_asset_conversion_tx_payment::ChargeAssetTxPayment<Runtime>,
     cumulus_primitives_storage_weight_reclaim::StorageWeightReclaim<Runtime>,
     frame_metadata_hash_extension::CheckMetadataHash<Runtime>,
 );
@@ -296,10 +296,16 @@ mod runtime {
     #[runtime::pallet_index(11)]
     pub type TransactionPayment = pallet_transaction_payment::Pallet<Runtime>;
     #[runtime::pallet_index(12)]
-    pub type Assets = pallet_assets::Pallet<Runtime>;
+    pub type Assets = pallet_assets<Instance1>;
+    #[runtime::pallet_index(13)]
+    pub type PoolAssets = pallet_assets<Instance2>;
+    #[runtime::pallet_index(14)]
+    pub type AssetConversion = pallet_asset_conversion;
+    #[runtime::pallet_index(15)]
+    pub type AssetConversionTxPayment = pallet_asset_conversion_tx_payment;
 
     // Governance
-    #[runtime::pallet_index(15)]
+    #[runtime::pallet_index(18)]
     pub type Sudo = pallet_sudo;
 
     // Collator support. The order of these 4 are important and shall not change.
