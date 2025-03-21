@@ -25,6 +25,8 @@
 
 #[path = "xcm.rs"]
 mod xcm_config;
+#[path = "assets.rs"]
+mod assets_config;
 
 // Substrate and Polkadot dependencies
 use cumulus_pallet_parachain_system::RelayNumberMonotonicallyIncreases;
