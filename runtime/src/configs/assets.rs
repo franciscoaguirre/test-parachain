@@ -52,7 +52,7 @@ impl pallet_assets::Config<ForeignAssetsInstance> for Runtime {
     type BenchmarkHelper = ();
 }
 
-type NumericAssetId = u32;
+pub type NumericAssetId = u32;
 
 pub type PoolAssetsInstance = pallet_assets::Instance2;
 impl pallet_assets::Config<PoolAssetsInstance> for Runtime {

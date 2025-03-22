@@ -27,6 +27,7 @@
 mod xcm_config;
 #[path = "assets.rs"]
 mod assets_config;
+pub use assets_config::{Native, NativeAndAssets, NumericAssetId};
 
 // Substrate and Polkadot dependencies
 use cumulus_pallet_parachain_system::RelayNumberMonotonicallyIncreases;
